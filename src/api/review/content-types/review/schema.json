@@ -23,15 +23,16 @@
       "max": 10,
       "min": 0
     },
-    "body": {
-      "type": "blocks",
-      "required": true
-    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "reviews"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 50
     }
   }
 }

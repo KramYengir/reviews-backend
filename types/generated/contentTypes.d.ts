@@ -416,12 +416,16 @@ export interface ApiReviewReview extends Schema.CollectionType {
         min: 0;
         max: 10;
       }>;
-    body: Attribute.Blocks & Attribute.Required;
     categories: Attribute.Relation<
       'api::review.review',
       'manyToMany',
       'api::category.category'
     >;
+    body: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 50;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
