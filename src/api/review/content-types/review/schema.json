@@ -33,6 +33,14 @@
       "type": "richtext",
       "required": true,
       "minLength": 50
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
