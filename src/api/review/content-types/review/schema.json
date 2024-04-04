@@ -35,12 +35,20 @@
       "minLength": 50
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "masterpiece": {
+      "type": "boolean",
+      "default": false
+    },
+    "hiddenGem": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
